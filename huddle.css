@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  height: 100%;
+
   box-sizing: border-box;
 }
 .topmost {
@@ -23,6 +23,11 @@ body {
   margin-bottom: 0.1rem;
   border-radius: 24px;
   margin-right: 4rem;
+}
+.try-it:hover {
+  background-color: hsl(322, 100%, 66%);
+  color: #fff;
+  cursor: pointer;
 }
 .heading-paragraph {
   display: flex;
@@ -49,13 +54,18 @@ body {
   font-weight: 600;
   letter-spacing: 0.1vh;
   box-shadow: 5px 4px 5px hsl(180, 29%, 50%, 0.3);
-
+  transition: 5px 4px 5px hsl(180, 29%, 50%, 0.3) 0.16s ease;
   background-color: var(--Pink);
   font-size: 18px;
   color: white;
   border: none;
   margin-top: 40px;
   margin-bottom: 1px;
+  cursor: pointer;
+}
+.button:hover {
+  background: #800080;
+  box-shadow: none;
 }
 .screen-image {
   margin-top: 13vh;
@@ -109,15 +119,19 @@ body {
   margin-top: 1vh;
   font-size: 1.3rem;
 }
-.grow-together-background {
+.grow-together-background .img1 {
+  width: 100%;
   margin-top: 20vh;
-
+  visibility: visible;
   overflow: hidden;
+}
+.grow-together-background .img2 {
+  visibility: hidden;
 }
 .grow-together-section {
   display: flex;
   flex-direction: row;
-  margin-top: -1vw;
+  margin-top: -12vw;
   background-color: var(--very-pale-blue);
 }
 
@@ -143,6 +157,14 @@ body {
   margin-top: 12vh;
   margin-left: 5vw;
   width: 60%;
+}
+.grow-together-background-lower .img1 {
+  width: 100%;
+  overflow: hidden;
+  visibility: visible;
+}
+.grow-together-background-lower .img2 {
+  visibility: hidden;
 }
 .flowing-conversation-section {
   display: flex;
@@ -170,14 +192,20 @@ body {
   margin-top: 4vh;
   width: 85%;
 }
-.your-users-background {
-  margin-left: -1.5vw;
+.your-users-background .img1 {
+  width: 100%;
+  visibility: visible;
+
   margin-top: 15vh;
   overflow: hidden;
 }
+.your-users-background .img2 {
+  margin-top: -15vh;
+  visibility: hidden;
+}
 .your-user-section {
   background-color: var(--very-pale-blue);
-  margin-top: -1vw;
+  margin-top: -3vw;
   display: flex;
   flex-direction: row;
 }
@@ -203,6 +231,15 @@ body {
   height: 90%;
   margin-top: 5vh;
 }
+.your-users-bottom-background .img1 {
+  width: 100%;
+  visibility: visible;
+  overflow: hidden;
+}
+.your-users-bottom-background .img2 {
+  visibility: hidden;
+  overflow: hidden;
+}
 .bottom-heading-para {
   display: flex;
   flex-direction: column;
@@ -216,11 +253,12 @@ body {
 .bottom-button {
   align-self: center;
   border-radius: 34px;
+  outline: none;
   padding: 20px 75px 20px 75px;
   font-weight: 600;
   letter-spacing: 0.1vh;
   box-shadow: 5px 4px 5px hsl(180, 29%, 50%, 0.3);
-
+  cursor: pointer;
   background-color: var(--Pink);
   font-size: 18px;
   color: white;
@@ -228,15 +266,25 @@ body {
   margin-top: 40px;
   margin-bottom: 1px;
 }
-.footer-bg {
+.bottom-button:hover {
+  background: #800080;
+  box-shadow: none;
+}
+.footer-bg .img1 {
+  width: 100%;
   margin-top: 25vh;
   overflow: hidden;
+}
+.footer-bg .img2 {
+  margin-top: -25vh;
+  overflow: hidden;
+  visibility: hidden;
 }
 .footer-section {
   display: flex;
   width: 100%;
   background-color: var(--very-dark-cyan);
-  margin-top: -1vh;
+  margin-top: -4.5vh;
   color: #fff;
   flex-direction: row;
 }
@@ -295,7 +343,7 @@ body {
 .btn {
   font-size: 16px;
   background-color: var(--Pink);
-
+  cursor: pointer;
   color: white;
   border: 0;
   height: 7vh;
@@ -303,6 +351,9 @@ body {
   margin-left: 2vw;
   float: left;
   border-radius: 7px;
+}
+.btn:hover {
+  background: #800080;
 }
 .three-icons {
   margin-top: 10vh;
@@ -327,4 +378,321 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+@media only screen and (max-width: 375px) {
+  .topmost {
+    display: block;
+    margin-top: 5vh;
+    margin-left: 0px;
+  }
+  .topmost img {
+    width: 30%;
+    margin-top: 1vh;
+    margin-left: 5vw;
+  }
+  .try-it {
+    border: 1px solid var(--Pink);
+    width: 25%;
+    padding: 5px 0px 5px 20px;
+    margin-top: -4vh;
+    margin-left: 65vw;
+    font-size: 0.8rem;
+    margin-bottom: 0rem;
+    border-radius: 24px;
+  }
+  .heading-paragraph {
+    margin-top: 20vh;
+  }
+  .heading {
+    text-align: center;
+    width: 79%;
+    font-size: 1.5rem;
+  }
+  .paragraph {
+    width: 80%;
+    font-size: 0.8rem;
+    margin-left: 5vw;
+  }
+  .button {
+    padding: 15px 40px 15px 40px;
+    letter-spacing: 0vh;
+    font-size: 14px;
+  }
+  .screen-image {
+    margin-left: 8vw;
+  }
+  .screen-image img {
+    width: 90%;
+  }
+  .number-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .community .number {
+    font-size: 4rem;
+  }
+  .community-text {
+    font-size: 1rem;
+  }
+
+  .number-data .messages {
+    margin-right: 0vw;
+    margin-left: 21vw;
+  }
+  .messages .number-m {
+    font-size: 4rem;
+  }
+  .messages-text {
+    margin-left: 6vw;
+    font-size: 1rem;
+  }
+
+  .grow-together-background .img1 {
+    margin-top: 0vh;
+    visibility: hidden;
+  }
+  .grow-together-background .img2 {
+    margin-top: -102vh;
+    margin-left: 0vw;
+    width: 99.9%;
+    visibility: visible;
+    overflow: hidden;
+  }
+  .grow-together-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2vw;
+    background-color: var(--very-pale-blue);
+  }
+  .grow-together-par-head {
+    margin-top: 15vh;
+    width: 100%;
+  }
+  .grow-together-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    margin-left: 20vw;
+  }
+  .grow-together-paragraph {
+    margin-left: 5vw;
+    margin-top: 3vh;
+    margin-bottom: 20vw;
+    font-size: 0.8rem;
+    text-align: center;
+    width: 80%;
+  }
+  .grow-together-image {
+    width: 100%;
+  }
+  .grow-together-image img {
+    margin-top: 12vh;
+    margin-left: 8vw;
+    width: 80%;
+  }
+  .grow-together-background-lower .img1 {
+    visibility: hidden;
+    margin-top: -50vh;
+  }
+  .grow-together-background-lower .img2 {
+    margin-top: -7vh;
+    margin-left: -8vw;
+    visibility: visible;
+  }
+  .flowing-conversation-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .flowing-conversation-section-image {
+    width: 100%;
+  }
+  .flowing-conversation-section-image img {
+    width: 90%;
+    margin-top: 25vh;
+    margin-left: 7vw;
+  }
+  .flowing-conversation-section-heading-paragraph {
+    width: 100%;
+    margin-top: 10vh;
+    margin-left: 0vw;
+  }
+  .flowing-conversation-section-heading {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 10vw;
+    font-size: 1.3rem;
+  }
+  .flowing-conversation-section-paragraph {
+    font-size: 0.8rem;
+    margin-top: 2vh;
+    margin-left: 5vw;
+    text-align: center;
+    width: 85%;
+  }
+  .your-users-background .img1 {
+    visibility: hidden;
+    margin-left: -1.5vw;
+    margin-top: 0vh;
+  }
+  .your-users-background .img2 {
+    width: 100%;
+    overflow: hidden;
+    margin-top: -7vh;
+    visibility: visible;
+  }
+  .your-user-section {
+    background-color: var(--very-pale-blue);
+    margin-top: -3vw;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .your-user-heading-paragraph {
+    width: 100%;
+    margin-top: 10vh;
+    margin-left: 0vw;
+  }
+  .your-user-heading {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 30vw;
+    font-size: 1.3rem;
+  }
+  .your-user-paragraph {
+    margin-top: 2vh;
+    text-align: center;
+    margin-left: 5vh;
+    font-size: 0.8rem;
+    width: 85%;
+    margin-bottom: 15vh;
+  }
+  .your-user-image {
+    width: 100%;
+  }
+  .your-user-image img {
+    width: 80%;
+    height: 100%;
+    margin-left: 5vh;
+    margin-top: 5vh;
+  }
+  .your-users-bottom-background .img1 {
+    visibility: hidden;
+    margin-top: -50vh;
+    overflow: hidden;
+  }
+  .your-users-bottom-background .img2 {
+    width: 100%;
+    visibility: visible;
+    overflow: hidden;
+    margin-top: -3.5vh;
+  }
+  .bottom-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    align-self: center;
+    text-align: center;
+  }
+  .bottom-button {
+    padding: 20px 35px 20px 35px;
+    font-weight: 600;
+    letter-spacing: 0.1vh;
+    font-size: 0.8rem;
+    margin-top: 40px;
+    margin-bottom: 1px;
+  }
+  .footer-bg .img1 {
+    margin-top: 25vh;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  .footer-bg .img2 {
+    width: 100%;
+    margin-top: -25vh;
+    overflow: hidden;
+    visibility: visible;
+  }
+  .footer-section {
+    display: flex;
+    width: 100%;
+
+    margin-top: -0.9vh;
+
+    flex-direction: column-reverse;
+  }
+  .footer-left {
+    width: 100%;
+    margin-top: 15vh;
+    margin-left: 10vw;
+  }
+  .footer-right {
+    width: 100%;
+    margin-left: 10vw;
+  }
+  .footer-left-para {
+    margin-top: 1vh;
+    font-size: 0.8rem;
+    width: 85%;
+  }
+  .footer-span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    margin-left: 0.5vw;
+  }
+  .footer-left-phone {
+    margin-top: 6vh;
+    margin-left: 0.5vw;
+  }
+  .footer-left-phone span {
+    margin-left: 1vw;
+  }
+  .footer-left-email {
+    margin-top: 3vh;
+    margin-left: 0.5vw;
+  }
+  .footer-left-email span {
+    margin-left: 1vw;
+  }
+  .footer-right-heading {
+    margin-left: 0vw;
+    margin-top: 18vh;
+    font-size: 1.5rem;
+  }
+  .footer-right-para {
+    margin-top: 4vh;
+    font-size: 0.8rem;
+    width: 80%;
+  }
+  .footer-right-input {
+    margin-top: 6vh;
+  }
+  .input-text {
+    float: center;
+    margin: 0;
+    width: 80%;
+  }
+  .btn {
+    font-size: 0.8rem;
+    font-weight: 700;
+    width: 40%;
+    margin-top: 2vh;
+    margin-right: 18vw;
+    float: right;
+  }
+
+  .three-icons {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+  .footer-facebook-image {
+    width: 32px;
+    margin-right: 6vw;
+  }
+  .footer-instagram-image {
+    width: 32px;
+    margin-right: 6vw;
+  }
+  .footer-twitter-image {
+    width: 32px;
+    margin-right: 6vw;
+  }
 }
